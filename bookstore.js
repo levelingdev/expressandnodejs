@@ -11,9 +11,10 @@ app.get('/', (req, res) => {
   res.send('📚 Welcome to the Bookstore API! Use /books to get started.');
 });
 
+// ✅ Updated: Each book now includes its ISBN inside the object
 let books = {
-  "12345": { title: "Node for Beginners", author: "John Doe", reviews: {} },
-  "67890": { title: "Express in Action", author: "Jane Smith", reviews: {} }
+  "12345": { isbn: "12345", title: "Node for Beginners", author: "John Doe", reviews: {} },
+  "67890": { isbn: "67890", title: "Express in Action", author: "Jane Smith", reviews: {} }
 };
 
 let users = {}; // username: password
